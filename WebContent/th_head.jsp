@@ -10,7 +10,7 @@
 <title>teacher_head</title>
 <style>
    .mycontainer{
-   width:80%;
+   width:100%;
    margin:0 auto ;
    }
    .sui-dropup .dropdown-toggle, .sui-dropdown .dropdown-toggle {
@@ -20,6 +20,10 @@
    .sui-msg,.sui-form,.sui-nav {
 	font-size: 13px;
    }
+   .sui-navbar .navbar-inner {
+	padding-left: 10%;
+	padding-right: 10%;
+}
 </style>
 </head>
 <body>

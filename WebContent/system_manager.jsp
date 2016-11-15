@@ -24,30 +24,6 @@
      background:rgba(133,208,231,0.1);
    }
 </style>
-<script>
-	$(function(){
-		$(".batch").click(function(){
-			$("#btn_file").click();
-			$("#btn_file").on("change",function(){
-				var objUrl = getObjectURL(this.files[0]);
-				if(objUrl){
-					$(".batch").attr("src",objUrl);
-				}
-			});
-		});
-	});
-	function getObjectURL(file){
-		var url = null;
-		if(window.createObjectURL != undefined){
-			url=window.createObjectURL(file);
-		}else if(window.URL != undefined){
-			url=window.URL.createObjectURL(file);
-		}else if(window.webkitURL != undefined){
-			url=window.webkitURL.createObjectURL(file);
-		}
-		return url;
-	}
-</script>
 </head>
 <body>
       <!--导航栏  -->
