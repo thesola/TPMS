@@ -2,8 +2,18 @@ package com.tpms.po;
 
 import javax.persistence.Table;
 
+import tk.mybatis.mapper.annotation.NameStyle;
+import tk.mybatis.mapper.code.Style;
+
 @Table(name="t_user")
+@NameStyle(Style.normal)
 public class Tuser {
+	
+	public static final String ADMIN = "0";
+	public static final String TEACHER = "1";
+	public static final String STUDENT = "2";
+	public static final String MALE = "0";
+	public static final String FEMALE = "1";
 	
 	private String identity;
 	private String passwd;

@@ -2,6 +2,13 @@ package com.tpms.po;
 
 import java.sql.Date;
 
+import javax.persistence.Table;
+
+import tk.mybatis.mapper.annotation.NameStyle;
+import tk.mybatis.mapper.code.Style;
+
+@Table(name="t_monitoringright")
+@NameStyle(Style.normal)
 public class TmonitoringRight {
 	
 	private String teacherID;

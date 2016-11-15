@@ -1,28 +1,28 @@
 package com.tpms.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
 
-import com.tpms.dao.BaseDAO;
 import com.tpms.po.Tclass;
-import com.tpms.po.TmanagementRight;
-import com.tpms.po.TmonitoringRight;
 import com.tpms.po.Tstudent;
 import com.tpms.po.Tteacher;
-import com.tpms.po.Tuser;
 
-public class AdminService {
+public interface AdminService {
 	
-	@Autowired
-	private BaseDAO<Tuser> userDAO;
-	@Autowired
-	private BaseDAO<Tstudent> studentDAO;
-	@Autowired
-	private BaseDAO<Tteacher> teacherDAO;
-	@Autowired
-	private BaseDAO<TmanagementRight> managementRightDAO;
-	@Autowired 
-	private BaseDAO<TmonitoringRight> monitoringRightDAO;
-	@Autowired
-	private BaseDAO<Tclass> classDAO;
+	// 导入单个学生
+	public void insertOneStudnt(Tstudent tstudent);
+	
+	// 导入单个教师
+	public void insertOneTeacher(Tteacher tteacher) ;
 
+	// 导入单个班级
+	public void insertOneClass(Tclass tclass);
+	
+	// 导入多个学生
+	public void insertStudents(List<Tstudent> tstudents);
+	
+	// 修改用户状态
+	// 获取教师列表
+	// 获取班级列表
+	// 按班级检索学生信息
+	
 }

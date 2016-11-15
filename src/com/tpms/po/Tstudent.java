@@ -1,5 +1,12 @@
 package com.tpms.po;
 
+import javax.persistence.Table;
+
+import tk.mybatis.mapper.annotation.NameStyle;
+import tk.mybatis.mapper.code.Style;
+
+@Table(name="t_student")
+@NameStyle(Style.normal)
 public class Tstudent {
 
 	private String studentID;
@@ -9,6 +16,13 @@ public class Tstudent {
 	private String groupID;
 	
 	public Tstudent() {
+	}
+	
+	public Tstudent(String studentID, String classID, String studentName, String gender) {
+		this.studentID = studentID;
+		this.classID = classID;
+		this.studentName = studentName;
+		this.gender = gender;
 	}
 
 	public Tstudent(String studentID, String classID, String studentName, String gender, String groupID) {
