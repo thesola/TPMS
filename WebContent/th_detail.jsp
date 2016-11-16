@@ -196,7 +196,7 @@ background: #d2d2d2;
 								       <p>需求分析</p>
 								       <p>2016.10.30</p>
 								       <p style="float:right;margin-right:35px;margin-top:-40px;"><a href="th_review(full).jsp" class="timeline_a">查看</a></p>
-								        <p style="float:right;margin-top:-40px;"><a href="th_review(full).jsp" class="timeline_a">审核</a></p>
+								        <p style="float:right;margin-top:-40px;"><a href="th_review_full.jsp" class="timeline_a">审核</a></p>
 								    </div>
 								</li>
 								<li class="type3">

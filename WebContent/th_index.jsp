@@ -124,7 +124,7 @@ font-size: 10px !important;
 									  <div style="width: 20%;" class="bar">20%</div>
 								   </div></td>
 						      <td>第一组</td>
-						      <td><a href="th_review(full).jsp" class="sui-btn btn-small btn-primary">审核</a>
+						      <td><a href="th_review_full.jsp" class="sui-btn btn-small btn-primary">审核</a>
 						          <a href="th_detail.jsp" class="sui-btn btn-small btn-primary">查看</a></td>
 						    </tr>
 						     <tr>
