@@ -53,12 +53,27 @@
 .start{
    margin-left:15%;
 }
+.selected{
+  background:rgba(244,244,244,0.3);
+}
 </style>
 <script>
    $(function(){
 	   $("#demo-list li").click(function(){
 		   $(this).addClass("current").siblings().removeClass("current");
 	   });
+	   /* 按钮开启 */
+	   $(".after_content").hide();
+	   $(".kaiqi").click(function(){
+		   $(".mytip").hide();
+		   $(".start").hide();
+		   $(".after_content").show();
+	   });
+	   /* 展开、折叠 */
+	   $("tr.parent").click(function(){
+		   //"child_"+this.id
+		   $(this).toggleClass("selected").siblings(".child_row_01").toggle();
+	   }).click();
    });
 </script>
 </head>
@@ -81,13 +96,97 @@
 			</div>
 	    </div>
 	    <div class="span8">
-	        <!-- 右侧内容 -->
+	        <!-- 右侧内容，开启前 -->
 			<div class="content" style="margin-top:20px;">
 			    <div class="mytip sui-msg msg-block msg-default msg-tips">
 					<div class="msg-con">教师还未开启互评功能，可点击下方“开启”按钮</div>
 					<s class="msg-icon"></s>
-              </div>
-               <div class="start"><a href="javascript:void(0);" class="sui-btn btn-bordered btn-primary">开启</a></div>
+                </div>
+                <div class="start">
+                    <a href="javascript:void(0);" class="kaiqi sui-btn btn-bordered btn-primary">开启</a>
+                 </div>
+			 </div> 
+			 <!--开启后，显示的内容  -->
+			 <div class="after_content" style="margin-top:20px;">
+			     <ul class="sui-nav nav-tabs">
+					  <li class="active"><a href="#one" data-toggle="tab">第一组</a></li>
+					  <li><a href="#two" data-toggle="tab">第二组</a></li>
+					  <li><a href="#three" data-toggle="tab">第三组</a></li>
+					  <li><a href="#four" data-toggle="tab">第四组</a></li>
+					  <li><a href="#five" data-toggle="tab">...</a></li>
+					  <li><a href="#score" data-toggle="tab">成绩单</a></li>
+			     </ul>
+			     <div class="tab-content tab-wraped">
+				  <div id="one" class="tab-pane active">
+				      <div class="sui-msg msg-block msg-default msg-tips">
+						<div class="msg-con">点击“汇总计算”一栏可以看到汇总结果的详细信息</div>
+						<s class="msg-icon"></s>
+	                  </div>
+				      <table class="sui-table table-bordered table-sideheader" style="width:80%; margin-left:12%;">
+						  <thead>
+						    <tr>
+						      <th style="width:20%">评分来源/评分项目</th>
+						      <th style="width:27%">UI</th>
+						      <th>健壮性</th>
+						      <th>扩展性</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr class="parent" id="row_01" style="cursor:pointer">
+						      <td>汇总计算</td>
+						      <td>50</td>
+						      <td>60</td>
+						      <td>70</td>
+						    </tr>
+						     <!-- 数据详情 -->
+						    <tr class="child_row_01">
+						      <td style="width:20%">何炅</td>
+						      <td>50</td>
+						      <td>60</td>
+						      <td>70</td>
+						    </tr>
+						    <tr class="child_row_01">
+						      <td style="width:20%">汪涵</td>
+						      <td>50</td>
+						      <td>60</td>
+						      <td>70</td>
+						    </tr>
+						</tbody>
+					</table>
+				  </div>
+				  <div id="two" class="tab-pane">
+				  </div>
+				  <div id="three" class="tab-pane">
+				  </div>
+				  <div id="four" class="tab-pane">
+				  </div>
+				  <div id="five" class="tab-pane">
+				  </div>
+				  <div id="score" class="tab-pane">
+				      <table class="sui-table table-zebra" style="width:80%; margin-left:12%;">
+						  <thead>
+						    <tr>
+						      <th>姓名</th>
+						      <th>分数</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td>何炅</td>
+						      <td>99</td>
+						    </tr>
+						    <tr>
+						      <td>谢娜</td>
+						      <td>99</td>
+						    </tr>
+						    <tr>
+						      <td>何炅</td>
+						      <td>99</td>
+						    </tr>
+						  </tbody>
+					   </table>
+				  </div>
+				</div>
 			 </div>
 	    </div>
 	  </div>
