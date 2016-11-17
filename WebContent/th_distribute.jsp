@@ -52,11 +52,20 @@
   width:25%;
   margin:10px;
 }
+.leader a{
+  width:80%;
+  margin:10px;
+}
 </style>
 <script>
    $(function(){
 	   $("#demo-list li").click(function(){
 		   $(this).addClass("current").siblings().removeClass("current");
+	   });
+	   /*选组长*/
+	   $(".choice a").click(function(){
+			var $remove = $(this).remove();
+			$remove.appendTo(".leader");
 	   });
    });
 </script>
@@ -122,22 +131,21 @@
 						<div class="msg-con">点击你要选择的组长按钮,点击确定即可</div>
 						<s class="msg-icon"></s>
 	              </div>
-	          <!-- 栅格，左2右6 -->
+	          <!-- 栅格，左3右8-->
                    <div class="grid-demo">
                         <div class="sui-row-fluid">
 						    <div class="span3" style="margin-left:2%; margin-right:3%;">
 						        <label>组长</label>
 						        <div class="leader" style="border:1px dashed #ccc">
-						            
 						        </div>
 						    </div>
 						    <div class="span8">
 						        <label>班级中可选名单</label>
 						         <div  class="choice" style="border:1px dashed #ccc">
-						               <a href="javascript:void(0);" class="sui-btn btn-primary">张三</a>
-						               <a href="javascript:void(0);" class="sui-btn btn-primary">李四</a>
-						               <a href="javascript:void(0);" class="sui-btn btn-primary">王五</a>
-						               <a href="javascript:void(0);" class="sui-btn btn-primary">王小肖</a>
+						               <a href="javascript:void(0);" class="sui-btn btn-primary">何炅</a>
+						               <a href="javascript:void(0);" class="sui-btn btn-primary">汪涵</a>
+						               <a href="javascript:void(0);" class="sui-btn btn-primary">刘涛</a>
+						               <a href="javascript:void(0);" class="sui-btn btn-primary">杨幂</a>
 						         </div>
 						    </div>
 						</div>
