@@ -7,7 +7,7 @@
 
 	<display-name>TPMS</display-name>
 	<welcome-file-list>
-		<welcome-file>sm_mamager</welcome-file>
+		<welcome-file>system_manager</welcome-file>
 	</welcome-file-list>
 
 	<context-param>
