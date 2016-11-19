@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tpms.dao.StudentDAO" >
+
+	<!-- 自定义结果返回集 -->
+	<resultMap type="Tstudent" id="studentMap">
+		<id property="studentID" column="studentID" javaType="java.lang.String" />
+		<result property="classID" column="classID" javaType="java.lang.String" />
+		<result property="studentName" column="studentName" javaType="java.lang.String" />
+		<result property="gender" column="gender" javaType="java.lang.String" />
+		<result property="groupID" column="groupID" javaType="java.lang.String" />
+	</resultMap>
+	
+</mapper>

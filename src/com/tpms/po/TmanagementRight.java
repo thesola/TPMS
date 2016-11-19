@@ -2,6 +2,7 @@ package com.tpms.po;
 
 import java.sql.Date;
 
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import tk.mybatis.mapper.annotation.NameStyle;
@@ -11,6 +12,8 @@ import tk.mybatis.mapper.code.Style;
 @NameStyle(Style.normal)
 public class TmanagementRight {
 	
+	@Id
+	private Integer id;
 	private String teacherID;
 	private String classID;
 	private Date effectiveDate;
@@ -24,6 +27,14 @@ public class TmanagementRight {
 		this.classID = classID;
 		this.effectiveDate = effectiveDate;
 		this.duration = duration;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getTeacherID() {

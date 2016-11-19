@@ -46,7 +46,7 @@
 		<!-- 默认DispatcherServlet会加载WEB-INF/【DISpatcherServlet的Servlet名字】-servlet.xml配置文件 -->
 		<servlet-name>TPMS</servlet-name>
 		<!-- 表示哪些请求交给Spring Web MVC处理，“/”是用来定义默认servlet映射的。也可以如"*.html"表示拦截所有以html为扩展名的请求 -->
-		<url-pattern>/</url-pattern>
+		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
 
 </web-app>
