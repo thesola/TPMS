@@ -89,8 +89,8 @@
 			   <ul id="demo-list">
 			    <li><a href="th_creat.jsp">新建实训任务</a></li>
 				<li><a href="th_distribute.jsp">项目分发</a></li>
-				<li><a href="th_index.jsp">查看进度</a></li>
-			    <li class="current"><a href="th_score.jsp">评分</a></li>
+				<li class="current"><a href="th_index.jsp">查看进度</a></li>
+			    <li ><a href="th_score.jsp">评分</a></li>
 			   </ul>
 			</div>
 	    </div>

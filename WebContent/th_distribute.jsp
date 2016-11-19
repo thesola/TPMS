@@ -66,6 +66,11 @@
 	   $(".choice a").click(function(){
 			var $remove = $(this).remove();
 			$remove.appendTo(".leader");
+			
+			$(".leader a").click(function(){
+				var $reback = $(this).remove();
+				$reback.appendTo(".choice");
+			});
 	   });
    });
 </script>
