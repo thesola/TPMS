@@ -1,7 +1,16 @@
 package com.tpms.po;
 
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import tk.mybatis.mapper.annotation.NameStyle;
+import tk.mybatis.mapper.code.Style;
+
+@Table(name="t_grouprole")
+@NameStyle(Style.normal)
 public class TgroupRole {
 	
+	@Id
 	private Integer roleID;
 	private String roleName;
 	private String roleDescription;

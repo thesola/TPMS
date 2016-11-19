@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http:// java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+
+	<display-name>TPMS</display-name>
+	<welcome-file-list>
+		<welcome-file>sm_mamager</welcome-file>
+	</welcome-file-list>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:applicationContext.xml</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+
+	<filter>
+		<filter-name>Spring character encoding filter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter
+		</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>Spring character encoding filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>TPMS</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet
+		</servlet-class>
+		<load-on-startup>2</load-on-startup><!-- 表示启动容器时初始化该Servlet -->
+	</servlet>
+
+	<servlet-mapping>
+		<!-- 默认DispatcherServlet会加载WEB-INF/【DISpatcherServlet的Servlet名字】-servlet.xml配置文件 -->
+		<servlet-name>TPMS</servlet-name>
+		<!-- 表示哪些请求交给Spring Web MVC处理，“/”是用来定义默认servlet映射的。也可以如"*.html"表示拦截所有以html为扩展名的请求 -->
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+
+</web-app>

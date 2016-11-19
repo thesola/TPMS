@@ -1,7 +1,17 @@
 package com.tpms.po;
 
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import tk.mybatis.mapper.annotation.NameStyle;
+import tk.mybatis.mapper.code.Style;
+
+@Table(name="t_itemstage")
+@NameStyle(Style.normal)
 public class TitemStage {
 
+	@Id
+	private Integer id;
 	private String itemID;
 	private Integer stageNumber;
 	private String stageState;
@@ -20,6 +30,14 @@ public class TitemStage {
 		this.stageName = stageName;
 		this.stageDescription = stageDescription;
 		this.stageData = stageData;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getItemID() {

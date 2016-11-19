@@ -1,7 +1,16 @@
 package com.tpms.po;
 
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import tk.mybatis.mapper.annotation.NameStyle;
+import tk.mybatis.mapper.code.Style;
+
+@Table(name="t_teacher")
+@NameStyle(Style.normal)
 public class Tteacher {
 	
+	@Id
 	private String teacherID;
 	private String teacherName;
 	private String gender;

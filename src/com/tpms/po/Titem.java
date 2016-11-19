@@ -1,7 +1,16 @@
 package com.tpms.po;
 
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import tk.mybatis.mapper.annotation.NameStyle;
+import tk.mybatis.mapper.code.Style;
+
+@Table(name="t_item")
+@NameStyle(Style.normal)
 public class Titem {
 	
+	@Id
 	private Integer itemID;
 	private String itemName;
 	private String itemDescription;

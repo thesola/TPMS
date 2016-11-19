@@ -1,7 +1,16 @@
 package com.tpms.po;
 
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import tk.mybatis.mapper.annotation.NameStyle;
+import tk.mybatis.mapper.code.Style;
+
+@Table(name="t_group")
+@NameStyle(Style.normal)
 public class Tgroup {
 	
+	@Id
 	private Integer groupID;
 	private String leaderID;
 	private String itemID;

@@ -19,7 +19,7 @@
 	<context:property-placeholder location="classpath:jdbc.properties" />
 
 	<!-- 扫描含有注解的包 -->
-	<!-- <context:component-scan base-package="com.zhihu.service"></context:component-scan> -->
+	<context:component-scan base-package="com.tpms.service"></context:component-scan>
 
 	<!-- 启动AOP支持 -->
 	<!-- <aop:aspectj-autoproxy /> -->
@@ -63,7 +63,7 @@
 	<!-- 配置Session工厂 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<!-- mapper.xml文件路径 -->
-	    <!-- <property name="mapperLocations" value="classpath*:/com/tpms/mapper/*.xml"/> -->
+	    <property name="mapperLocations" value="classpath*:/com/tpms/mapper/*.xml"/>
 		<!-- 数据库链接对象 -->
 		<property name="dataSource" ref="dataSource"></property>
 		<!-- 实体类对象路径 -->

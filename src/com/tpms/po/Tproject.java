@@ -2,8 +2,17 @@ package com.tpms.po;
 
 import java.sql.Date;
 
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import tk.mybatis.mapper.annotation.NameStyle;
+import tk.mybatis.mapper.code.Style;
+
+@Table(name="t_project")
+@NameStyle(Style.normal)
 public class Tproject {
 
+	@Id
 	private Integer projectID;
 	private String projectName;
 	private String projectDescription;
