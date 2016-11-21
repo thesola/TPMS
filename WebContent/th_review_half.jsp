@@ -4,45 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="css/menu.css" rel="stylesheet">
 <script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
 <title>review half</title>
 <style type="text/css">
-.menu {
-	float: left;
-	position: relative;
-	box-shadow: 0 2px 10px #5A4040;
-	text-align: center;
-	margin: 5% auto 0;
-	margin-left: 10%;
-	padding: 2px;
-}
-.menu ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-.menu ul li {
-	width: 100%;
-	display: block;
-	float: left;
-	position: relative;
-	line-height: 40px;
-}
-.menu ul li a {
-	overflow: hidden;
-	white-space: nowrap;
-	width: 100%;
-	font-size: 13px;
-	text-decoration: none;
-	color: #5e6469;
-	
-}
-.menu > ul > li.current, .menu > ul > li:hover {
-	background: #e2e2e2;
-}
-.current{
-   background: #e2e2e2;
-}
 .mytip{
    width:350px;
 }
@@ -96,7 +61,7 @@
 	    </div>
 	    <div class="span8">
 	        <!-- 右侧内容 -->
-			<div class="content" style="margin-top:20px;">
+			<div class="content" style="margin-top:20px;margin-left:10%;width:80%;">
 			       <!--面包屑  -->
 				   <ul class="sui-breadcrumb"> 
 					  <li><a href="th_index.jsp">查看进度</a></li>

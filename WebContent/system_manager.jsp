@@ -24,6 +24,27 @@
      background:rgba(133,208,231,0.1);
    }
 </style>
+<script>
+    $(function(){
+    	$("#add").click(function(){
+    		$("#MyTeacherAdd").hide();
+    		$(".sui-modal-backdrop").hide();
+    		$(".tr_add").append(
+    				'<tr>'+
+    				   '<td>1402753129</td>'+
+    				   '<td>刘涛</td>'+
+    				   '<td>女</td>'+
+    				   '<td>'+
+    				       '<a href="javascript:void(0);" class="sui-btn btn-bordered btn-info" style="margin-right:4px;">禁用</a>'+
+    				       '<a href="javascript:void(0);" id="J_addsuppliers"  data-toggle="modal" data-backdrop="static"'+
+    				       'data-target="#J_addsuppliersDialog" data-width="large"'+
+    				       'class="sui-btn btn-primary  btn-bordered btn-info">详情</a>'+
+    				    '</td>'+
+    				'</tr>'
+    		);
+    	});
+    });
+</script>
 </head>
 <body>
       <!--导航栏  -->
@@ -40,8 +61,8 @@
 		      <th>操作</th>
 		    </tr>
 		  </thead>
-		  <tbody>
-		    <tr>
+		  <tbody class="tr_add">
+		    <tr> 
 		      <td>1402753129</td>
 		      <td>孟雪</td>
 		      <td>女</td>

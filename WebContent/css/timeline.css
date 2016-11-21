@@ -1,0 +1,77 @@
+@CHARSET "UTF-8";
+/* 进度样式 */
+.timeline{
+  width:90%;
+}
+   .timeline li {
+position: relative;
+height: 75px;
+font-size: 0;
+border-left: solid 1px #4aa0e7;
+padding-left: 7px;
+}
+    ul, li {
+list-style-type: none;
+list-style: none;
+}
+.timeline .circle {
+display: block;
+box-sizing: content-box;
+width: 15px;
+height: 15px;
+background: #4aa0e7;
+border-radius: 50%;
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
+border: solid 4px #fff;
+position: absolute;
+top: 0;
+left: -12px;
+}
+.timeline .txt {
+    margin-top: 5px;
+    background: rgba(210,210,210,0.2);
+    margin-left: 10px;
+    padding: 1px;
+    height:68px;
+}
+.timeline .txt p {
+width: 65px;
+line-height: 16px;
+}
+.timeline .txt p {
+font-size: 13px;
+color: #56a1db;
+}
+.timeline .type3 .txt p {
+font-size: 13px;
+color: #d2d2d2;
+}
+.timeline .txt p:last-child {
+font-size: 12px;
+}
+.timeline .type3 {
+border-color: #d2d2d2;
+}
+.timeline .type3 .circle, .timeline .type3 .line {
+background: #d2d2d2;
+}
+.timeline_a {
+	text-decoration: none;
+	border: 1px solid #5871a0;
+	padding: 3px;
+	font-size: 11px;
+	color: #5456b0;
+}
+.timeline_a_type3{
+  text-decoration: none;
+	border: 1px solid #bababa;
+	padding: 3px;
+	font-size: 11px;
+	color: #bababa;
+}
+.timeline_a:hover {
+	background:rgba(74,160,231,0.8);
+	color:#fff;
+	text-decoration:none;
+}

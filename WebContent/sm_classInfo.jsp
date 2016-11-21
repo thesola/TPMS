@@ -24,7 +24,37 @@
    tbody tr:hover{
      background:rgba(133,208,231,0.1);
    }
+   .inputDetail input{
+     width:96px;
+   }
+   .sex{
+   color: #A4A4A4;
+   font-size:12px;
+   }
 </style>
+<script type="text/javascript">
+   $(function(){
+	   $(".addStu").click(function(){
+		    $(".inputDetail").append(
+		    		'<div class="input" style="margin-right:8px;margin-top:3px;">'+
+		    		    '<input type="text" id="class" value="软件1431" name="class" style="margin-right:4px;"/>'+
+		    		    '<input type="text" id="num" placeholder="学号" name="num" style="margin-right:4px;"/>'+
+		    		    '<input type="text" id="name" placeholder="姓名" name="name" style="margin-right:4px;"/>'+
+		    		    '<span class="sui-dropdown dropdown-bordered select"><span class="dropdown-inner"><a id="select" role="button" href="javascript:void(0);" data-toggle="dropdown" class="dropdown-toggle">'+
+		    		        '<input value="female" name="sex" type="hidden"><i class="caret"></i><span class="sex">选择性别</span></a>'+
+		    		        '<ul role="menu" aria-labelledby="drop4" class="sui-dropdown-menu">'+
+		    		            '<li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="male">男</a></li>'+
+		    		            '<li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="female">女</a></li>'+
+		    		        '</ul></span></span>'+  
+		    		     '<a href="javascript:void(0);" class="delStu sui-btn btn-bordered btn-primary" style="margin-left:4px;">-</a>'+
+		    		  '</div> '
+		    );
+		    $(".delStu").click(function(){
+		    	$(this).parent().remove();
+		    });
+	    });
+   });
+</script>				 
 <body>
     <!--导航栏  -->
     <jsp:include page="sm_head.jsp"/>
@@ -82,7 +112,7 @@
    
     <!-- 学生信息添加模态框 -->
    <div id="StudentAdd" tabindex="-1" role="dialog" class="sui-modal hide fade" data-addsupplierurl="http://" 
-   data-getsuppliersurl="http://xxx">
+   data-getsuppliersurl="http://xxx" style="width:40%; top:30%;left:45%;">
 	  <div class="modal-dialog">
 	      <div class="modal-content">
 	          <div class="modal-header">
@@ -91,36 +121,37 @@
 	          </div>
 	          <div class="modal-body sui-form form-horizontal" style="overflow-y: auto;">
 	              <form class="sui-form form-horizontal sui-validate">
-	               <div class="control-group">
-					    <label for="class" class="control-label">班级：</label>
-					    <div class="controls">
-					      <input type="text" id="class" value="软件1431" name="class">
-					    </div>
-					  </div>
-			         <div class="control-group">
-					    <label for="num" class="control-label">学号：</label>
-					    <div class="controls">
-					      <input type="text" id="num" placeholder="required" data-rules="required" name="num">
-					    </div>
-					  </div>
-					  <div class="control-group">
-					    <label for="name" class="control-label">姓名：</label>
-					    <div class="controls">
-					      <input type="text" id="name" placeholder="required" data-rules="required" name="name">
-					    </div>
-					  </div>
-					  <div class="control-group">
-					    <label for="sex" class="control-label">性别：</label>
-					    <label data-toggle="radio" class="radio-pretty inline checked">
-						    <input type="radio" checked="checked" name="radio1"><span>男</span>
-						 </label>
-					    <label data-toggle="radio" class="radio-pretty inline">
-						    <input type="radio" name="radio1"><span>女</span>
-						 </label>
-					  </div>
-					    <div  style="text-align:center">
-					      <input type="submit" id="add" name="add" value="添加" class="sui-btn btn-bordered btn-primary">
-					    </div>
+	                  <!-- 标签 -->
+	                  <div class="label">
+	                      <span>
+	                          <label for="class" class="control-label">班级</label>
+	                      </span>
+	                      <span>
+	                          <label for="num" class="control-label">学号</label>
+	                      </span>
+	                      <span>
+	                          <label for="num" class="control-label">姓名</label>
+	                      </span>
+	                      <span>
+	                          <label for="num" class="control-label">性别</label>
+	                      </span>
+	                      <span>
+	                          <label for="num" class="control-label">操作</label>
+	                  </div>
+	                  <!-- 填写 -->
+	                  <div class="inputDetail" style="margin-left:6%;margin-right:7%;">
+	                      <input type="text" id="class" value="软件1431" name="class">
+	                      <input type="text" id="num" placeholder="学号" name="num">
+	                      <input type="text" id="name" placeholder="姓名" name="name">
+	                      <span class="sui-dropdown dropdown-bordered select"><span class="dropdown-inner"><a id="select" role="button" href="javascript:void(0);" data-toggle="dropdown" class="dropdown-toggle">
+						      <input value="female" name="sex" type="hidden"><i class="caret"></i><span class="sex">选择性别</span></a>
+							    <ul role="menu" aria-labelledby="drop4" class="sui-dropdown-menu">
+							      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="male">男</a></li>
+							      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="female">女</a></li>
+							    </ul></span></span>
+	                      <a href="javascript:void(0);" class="addStu sui-btn btn-bordered btn-primary">+</a>
+	                  </div>
+	                  <div style="float:right;margin-right:7%;margin-top:10px;"><a href="javascript:void(0);" class="sui-btn btn-bordered btn-primary">添加</a></div>
 				   </form>
 	          </div>
 	      </div>

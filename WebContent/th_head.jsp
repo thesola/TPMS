@@ -34,13 +34,13 @@
 		      <!-- <li class="active"><a href="#">首页</a></li> -->
 		      <li class="sui-dropdown"><a href="javascript:void(0);" data-toggle="dropdown" class="dropdown-toggle">正在管理<i class="caret"></i></a>
 		        <ul role="menu" class="sui-dropdown-menu">
-		          <li role="presentation"><a role="menuitem" tabindex="-1" href="system_manager.jsp">软件1431</a></li>
+		          <li role="presentation"><a role="menuitem" tabindex="-1" href="th_index.jsp">软件1431</a></li>
 		        </ul>
 		      </li>
 		      <li class="sui-dropdown"><a href="javascript:void(0);" data-toggle="dropdown" class="dropdown-toggle">历史管理<i class="caret"></i></a>
 		        <ul role="menu" class="sui-dropdown-menu">
-		          <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="batch">软件1331</a></li>
-		          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">软件1231</a></li>
+		          <li role="presentation"><a role="menuitem" tabindex="-1" href="history_pro.jsp" class="batch">图书管理系统</a></li>
+		          <li role="presentation"><a role="menuitem" tabindex="-1" href="history_pro.jsp" class="batch">c++实训管理系统</a></li>
 		        </ul>
 		      </li>
 		    </ul>

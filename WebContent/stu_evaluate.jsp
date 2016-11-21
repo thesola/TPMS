@@ -4,10 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css" rel="stylesheet">
 <link href="css/sui-progress.css" rel="stylesheet">
   <script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
-<title>student attend project</title>
+<title>student evaluate</title>
 <style>
 /* 导航条 */
 .mycontainer{
@@ -35,8 +34,8 @@
 <body>
    <!-- 导航栏 -->
    <jsp:include page="stu_head.jsp"/>
-    
-    <div class="container">
+   
+   <div class="container">
          <div class="content" style="margin-top:20px;">
 			    <div class="progress">
 		          <span style="font-size:14px;color:#666">XXXX项目进度</span>
@@ -72,7 +71,7 @@
 								   </div></td>
 						      <td>第一组</td>
 						      <td>
-					             <a href="#" class="history sui-btn btn-small btn-primary">查看</a>
+					             <a href="stu_score.jsp" class="history sui-btn btn-small btn-primary">待评分</a>
 						    </tr>
 						     <tr>
 						      <td><a href="javascript:void(0);" class="sui-btn btn-primary">需求分析进行中</a></td>
@@ -83,7 +82,7 @@
 									  <div style="width: 20%;" class="bar">20%</div>
 								   </div></td>
 						      <td>第一组</td>
-						        <td><a href="javascript:void(0);" class="sui-btn btn-small btn-primary">查看</a></td>
+						        <td><a href="javascript:void(0);" class="sui-btn btn-small btn-primary">待评分</a></td>
 						    </tr>
 						  </tbody>
 						</table>
@@ -91,6 +90,5 @@
 		      </div>
 		   </div>
     </div>
-    
 </body>
 </html>

@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+.mytable{
+   width:60%;
+}
+tbody tr td{
+  width:20%;
+}
+/* 进度条 */
+.sui-progress.progress-small {
+	height: 14px;
+	line-height: 14px;
+	margin-bottom:5px;
+}
+.sui-progress {
+	width: 75%;
+}
+.bar{
+font-size: 10px !important;
+}
