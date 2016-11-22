@@ -10,7 +10,7 @@
 <title>review full</title>
 <style type="text/css">
   .container{
-   width:80%;
+   width:60%;
    margin-top:2%;
    margin:0 auto;
    }

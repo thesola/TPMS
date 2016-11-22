@@ -4,45 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="css/menu.css" rel="stylesheet">
 <script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
 <title>teacher index</title>
 <style type="text/css">
-.menu {
-	float: left;
-	position: relative;
-	box-shadow: 0 2px 10px #5A4040;
-	text-align: center;
-	margin: 5% auto 0;
-	margin-left: 10%;
-	padding: 2px;
-}
-.menu ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-.menu ul li {
-	width: 100%;
-	display: block;
-	float: left;
-	position: relative;
-	line-height: 40px;
-}
-.menu ul li a {
-	overflow: hidden;
-	white-space: nowrap;
-	width: 100%;
-	font-size: 13px;
-	text-decoration: none;
-	color: #5e6469;
-	
-}
-.menu > ul > li.current, .menu > ul > li:hover {
-	background: #e2e2e2;
-}
-.current{
-   background: #e2e2e2;
-}
 .mytip{
    width:350px;
 }
@@ -56,6 +21,10 @@
 .selected{
   background:rgba(244,244,244,0.3);
 }
+ #jRate svg{
+     width:30px;
+     height:30px;
+   }
 </style>
 <script>
    $(function(){
@@ -153,6 +122,27 @@
 						    </tr>
 						</tbody>
 					</table>
+					
+					<!-- 教师评分 -->
+					<table class="sui-table table-bordered table-sideheader" style="width:80%; margin-left:12%;">
+						  <thead>
+						    <tr>
+						      <th style="width:20%">成员</th>
+						      <th style="width:27%">角色</th>
+						      <th>评分</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr class="parent" id="row_01" style="cursor:pointer">
+						      <td>何炅</td>
+						      <td>UI</td>
+						      <td>
+						          <span id="jRate" class="jRate"></span>
+						          <input type="text" value="0" style="width:50px;border:none ;margin-left:20%">分
+						      </td>
+						    </tr>
+						</tbody>
+					</table>
 				  </div>
 				  <div id="two" class="tab-pane">
 				  </div>
@@ -192,6 +182,26 @@
 	  </div>
 	</div>
     
+    
+    <script src="http://libs.useso.com/js/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+	<script src="js/jRate.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(function () {
+			var that = this;
+			$("#jRate").jRate({
+				rating: 3,
+				strokeColor: 'black',
+				width: 80,
+				height: 80,
+				onChange: function(rating) {
+					console.log("OnChange: Rating: "+rating);
+				},
+				onSet: function(rating) {
+					console.log("OnSet: Rating: "+rating);
+				}
+			});
+		});
+	</script>
 	
     
 </body>

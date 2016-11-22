@@ -6,7 +6,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css" rel="stylesheet">
   <script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script>
 <title>student my team</title>
 <style>
 
@@ -94,42 +93,14 @@
 </head>
 <body>
    <!-- 导航栏 -->
-   <div class="mycontainer"> 
-       <div class="sui-navbar">
-		  <div class="navbar-inner"><a href="#" class="sui-brand">实训项目管理系统</a>
-		     <ul class="sui-nav">
-		      <li class="active"><a href="stu_MyTeam.jsp">我的团队</a></li>
-		      <li><a href="stu_task_pro.jsp">本组任务进度</a></li>
-		      <li><a href="stu_attend_pro.jsp">参与过的项目</a></li>
-		      <li><a href="#">互评功能</a></li>
-		    </ul>
-		    <ul class="sui-nav pull-right">
-		      <li>
-		          <span class="sui-dropdown" style="margin-top:12px;">
-		             <span class="dropdown-inner">
-			             <a href="#"><img alt="head" src="http://oeznmscij.bkt.clouddn.com//image1475068204818004744.jpg"
-			              width="22px" height="22px" style="border-radius: 50%;"/></a>
-		                <a role="button" data-toggle="dropdown" href="#" class="dropdown-toggle">name<i class="caret"></i></a>
-	                      <ul role="menu" aria-labelledby="drop1" class="sui-dropdown-menu">
-	                      <li role="presentation"><a role="menuitem" tabindex="-1" href="th_personInfo.jsp">个人中心</a></li>
-	                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">退出</a></li>
-	                      </ul>
-	                 </span>
-	             </span>
-		      </li>
-		      <li><a href="#"><i class="sui-icon icon-pc-question-circle"></i>&nbsp;帮助</a></li>
-		    </ul>
-		  </div>
-		</div>
-    </div> 
-    
+   <jsp:include page="stu_head.jsp"/>    
     
    <div class="container">
       <!-- 项目名称 -->
       <div class="name_pro">
          <label style="font-size:14px;margin-bottom:20px;">实训项目监管系统</label>
       </div>
-      <div class="con" style="width:90%;height:500px;border:1px dashed #dedede;margin-top:20px;margin-left:5%;">
+      <div class="con" style="width:90%;height:500px;border:1px dashed #333;margin-top:20px;margin-left:5%;">
           <label style="color:rgba(200, 196, 196, 1);font-size:14px;">我的团队</label>
           <!-- 左6右4 -->
           <div class="grid-demo" style="margin-top:10px;">
@@ -166,7 +137,7 @@
 						   </td>
 					    </tr>
 					    <!--增加一行数据  -->
-					    <tr>
+					    <tr class="addTeam ">
 					       <td></td>
 					       <td>
 					          <a id="J_addsuppliers"  data-toggle="modal" data-backdrop="static"
@@ -244,7 +215,7 @@
 						    </div>
 						</div>
 						<div style="float:right;margin-right:4%;margin-top:2%;">
-						  <a href="javascript:void(0);" class="sui-btn btn-bordered btn-primary">确定</a>
+						  <a href="javascript:void(0);" class="sure_choice sui-btn btn-bordered btn-primary">确定</a>
 						</div>
                    </div>				
 	          </div>

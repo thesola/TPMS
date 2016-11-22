@@ -4,9 +4,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css" rel="stylesheet">
+<link href="css/timeline.css" rel="stylesheet">
   <script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script>
 <title>student task progress</title>
 </head>
 <style>
@@ -39,86 +38,6 @@
      height:200px;
      font-size:16px;
    }
-   /* 进度样式 */
-.timeline{
-  width:90%;
-}
-   .timeline li {
-position: relative;
-height: 75px;
-font-size: 0;
-border-left: solid 1px #4aa0e7;
-padding-left: 7px;
-}
-    ul, li {
-list-style-type: none;
-list-style: none;
-}
-.timeline .circle {
-display: block;
-box-sizing: content-box;
-width: 15px;
-height: 15px;
-background: #4aa0e7;
-border-radius: 50%;
--moz-border-radius: 50%;
--webkit-border-radius: 50%;
-border: solid 4px #fff;
-position: absolute;
-top: 0;
-left: -12px;
-}
-.timeline .txt {
-    margin-top: 5px;
-    background: rgba(210,210,210,0.2);
-    margin-left: 10px;
-    padding: 1px;
-    height:68px;
-}
-.timeline .txt p {
-width: 65px;
-line-height: 16px;
-}
-.timeline .txt p {
-font-size: 13px;
-color: #56a1db;
-}
-.timeline .type3 .txt p {
-font-size: 13px;
-color: #d2d2d2;
-}
-.timeline .txt p:last-child {
-font-size: 12px;
-}
-.timeline .type3 {
-border-color: #d2d2d2;
-}
-.timeline .type3 .circle, .timeline .type3 .line {
-background: #d2d2d2;
-}
-.timeline_a {
-	text-decoration: none;
-	border: 1px solid #5871a0;
-	padding: 3px;
-	font-size: 11px;
-	color: #5456b0;
-}
-.timeline_a_type3{
-  text-decoration: none;
-	border: 1px solid #bababa;
-	padding: 3px;
-	font-size: 11px;
-	color: #bababa;
-}
-.timeline_a_type3:hover{
-text-decoration:none;
-color:#bababa;
-}
-.timeline_a:hover {
-	background:rgba(74,160,231,0.8);
-	color:#fff;
-	text-decoration:none;
-}
 </style>
 <script>
    $(function(){
@@ -127,35 +46,7 @@ color:#bababa;
 </script>
 <body>
 <!-- 导航栏 -->
-   <div class="mycontainer"> 
-       <div class="sui-navbar">
-		  <div class="navbar-inner"><a href="#" class="sui-brand">实训项目管理系统</a>
-		     <ul class="sui-nav">
-		      <li><a href="stu_MyTeam.jsp">我的团队</a></li>
-		      <li class="active"><a href="stu_task_pro.jsp">本组任务进度</a></li>
-		      <li><a href="stu_attend_pro.jsp">参与过的项目</a></li>
-		      <li><a href="#">互评功能</a></li>
-		    </ul>
-		    <ul class="sui-nav pull-right">
-		      <li>
-		          <span class="sui-dropdown" style="margin-top:12px;">
-		             <span class="dropdown-inner">
-			             <a href="#"><img alt="head" src="http://oeznmscij.bkt.clouddn.com//image1475068204818004744.jpg"
-			              width="22px" height="22px" style="border-radius: 50%;"/></a>
-		                <a role="button" data-toggle="dropdown" href="#" class="dropdown-toggle">name<i class="caret"></i></a>
-	                      <ul role="menu" aria-labelledby="drop1" class="sui-dropdown-menu">
-	                      <li role="presentation"><a role="menuitem" tabindex="-1" href="th_personInfo.jsp">个人中心</a></li>
-	                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">退出</a></li>
-	                      </ul>
-	                 </span>
-	             </span>
-		      </li>
-		      <li><a href="#"><i class="sui-icon icon-pc-question-circle"></i>&nbsp;帮助</a></li>
-		    </ul>
-		  </div>
-		</div>
-    </div> 
-    
+   <jsp:include page="stu_head.jsp"/>
     
    <div class="container">
       <!-- 未创建-->

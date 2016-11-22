@@ -45,7 +45,7 @@
 		      <li><a href="stu_MyTeam.jsp">我的团队</a></li>
 		      <li class=""><a href="stu_task_pro.jsp">本组任务进度</a></li>
 		      <li><a href="stu_attend_pro.jsp">参与过的项目</a></li>
-		      <li><a href="#">互评功能</a></li>
+		      <li><a href="stu_evaluate.jsp">互评功能</a></li>
 		    </ul>
 		    <ul class="sui-nav pull-right">
 		      <li>

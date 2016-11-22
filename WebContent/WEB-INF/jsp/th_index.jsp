@@ -4,63 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="css/sui-progress.css" rel="stylesheet">
+<link href="css/menu.css" rel="stylesheet">
 <script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
 <title>teacher index</title>
 <style type="text/css">
-.menu {
-	float: left;
-	position: relative;
-	box-shadow: 0 2px 10px #5A4040;
-	text-align: center;
-	margin: 5% auto 0;
-	margin-left: 10%;
-	padding: 2px;
-}
-.menu ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-.menu ul li {
-	width: 100%;
-	display: block;
-	float: left;
-	position: relative;
-	line-height: 40px;
-}
-.menu ul li a {
-	overflow: hidden;
-	white-space: nowrap;
-	width: 100%;
-	font-size: 13px;
-	text-decoration: none;
-	color: #5e6469;
-	
-}
-.menu > ul > li.current, .menu > ul > li:hover {
-	background: #e2e2e2;
-}
-.current{
-   background: #e2e2e2;
-}
-.mytable{
-   width:60%;
-}
-tbody tr td{
-  width:20%;
-}
-/* 进度条 */
-.sui-progress.progress-small {
-	height: 14px;
-	line-height: 14px;
-	margin-bottom:5px;
-}
-.sui-progress {
-	width: 75%;
-}
-.bar{
-font-size: 10px !important;
-}
+
+
 </style>
 <script>
    $(function(){
@@ -90,10 +40,10 @@ font-size: 10px !important;
 	    </div>
 	    <div class="span8">
 	        <!-- 右侧内容 -->
-			<div class="content" style="margin-top:20px;">
+			<!-- <div class="content" style="margin-top:20px;">
 			    <div class="progress">
 		          <span style="font-size:14px;color:#666">软件1431项目进度</span>
-		          <!-- 搜索框 -->
+		          搜索框
 		          <div class="search" style="margin-top:20px;float:right;margin-bottom:20px;margin-right:5%">
 		              <form class="sui-form form-search">
 						  <div class="input-append">
@@ -143,7 +93,8 @@ font-size: 10px !important;
 						</table>
 		          </div>
 		      </div>
-			</div>
+			</div> -->
+			<jsp:include page="class_progress.jsp"/>
 	    </div>
 	  </div>
 	</div>
