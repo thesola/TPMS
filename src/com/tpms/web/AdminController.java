@@ -34,6 +34,22 @@ public class AdminController {
 	private final String logoff = "注销";
 	private final String restore = "还原";
 	
+	// addMoniRight.do
+	@RequestMapping("addMoniRight.do")
+	@ResponseBody
+	public ResponseEntity<String> addMoniRightDO( String cID, String tID ){
+		adminService.addMonitoringRight(new TmonitoringRight(tID, cID, null, null));
+		return new ResponseEntity<>(HttpStatus.OK);
+	}
+	
+	// addManaRight.do
+	@RequestMapping("addManaRight.do")
+	@ResponseBody
+	public ResponseEntity<String> addManaRightDO( String cID, String tID ){
+		adminService.addManagementRight(new TmanagementRight(tID, cID, null, null));
+		return new ResponseEntity<>(HttpStatus.OK);
+	}
+	
 	// getUsableClasses.do
 	@RequestMapping("getUsableClasses.do")
 	@ResponseBody

@@ -69,7 +69,7 @@ public class testAdminService {
 	
 	@Test
 	public void testGetStudentsByClassID(){
-		List<Tstudent> tstudents = adminService.getStudentsByClassID("2");
+		List<Tstudent> tstudents = adminService.getStudentsByClassID(Integer.parseInt("2"));
 		for (Tstudent tstudent : tstudents) {
 			System.err.println( tstudent );
 		}
