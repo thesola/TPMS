@@ -258,6 +258,9 @@
    <script>
   $supDialog = $('#J_addsuppliersDialog')
   $supDialog.on('click', '.J_addOneSupplier', function(e) {
+	$.post("getUsableClasses.do",{},function(data){
+		alert( data );
+	});
     $supDialog.modal('shadeIn');
     return $.confirm({
       title: '班级',

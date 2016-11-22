@@ -33,6 +33,13 @@ public class AdminController {
 	private final String logoff = "注销";
 	private final String restore = "还原";
 	
+	// getUsableClasses.do
+	@RequestMapping("getUsableClasses.do")
+	@ResponseBody
+	public ResponseEntity<List<ClassInfo>>>getUsableClassesDO(){
+		
+	}
+	
 	// delMoni.do
 	@RequestMapping("delMoni.do")
 	@ResponseBody
