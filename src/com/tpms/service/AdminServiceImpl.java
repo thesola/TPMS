@@ -152,7 +152,7 @@ public class AdminServiceImpl implements AdminService{
 	}
 
 	@Override
-	public List<Tstudent> getStudentsByClassID(String classID) {
+	public List<Tstudent> getStudentsByClassID(Integer classID) {
 		return studentDAO.selectByClassID(classID);
 	}
 

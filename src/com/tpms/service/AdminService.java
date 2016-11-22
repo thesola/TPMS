@@ -53,7 +53,7 @@ public interface AdminService {
 	public List<Tclass> getClassesByStatus(String status);
 	
 	// 按班级检索学生列表
-	public  List<Tstudent> getStudentsByClassID(String classID);
+	public  List<Tstudent> getStudentsByClassID(Integer classID);
 	
 	// 对学生姓名/学号模糊查询
 	public List<Tstudent> getStudentsBy(String key);

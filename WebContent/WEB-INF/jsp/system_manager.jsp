@@ -114,6 +114,8 @@
 					    <tr>
 					      <th>班级</th>
 					      <th>人数</th>
+					      <th>开始时间</th>
+					      <th>结束时间</th>
 					      <th>操作</th>
 					    </tr>
 					  </thead>
@@ -121,11 +123,15 @@
 					    <tr>
 					      <td>软件1431</td>
 					      <td>36</td>
+					      <td><input type="text" data-toggle="datepicker" value="2016-11-22"/></td>
+					      <td><input type="text" data-toggle="datepicker" value="2016-11-22"/></td>
 					      <td><a href="javascript:void(0);" class="sui-btn btn-bordered btn-info">删除</a></td>
 					    </tr>
 					    <tr>
 					      <td>软件1431</td>
 					      <td>36</td>
+					      <td><input type="text" data-toggle="datepicker" value="2016-11-22"/></td>
+					      <td><input type="text" data-toggle="datepicker" value="2016-11-22"/></td>
 					      <td><a href="javascript:void(0);" class="sui-btn btn-bordered btn-info">删除</a></td>
 					    </tr>
 					    <tr>

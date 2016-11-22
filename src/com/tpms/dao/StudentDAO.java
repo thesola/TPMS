@@ -24,5 +24,5 @@ public interface StudentDAO extends BaseDAO<Tstudent> {
 	// 根据班级id查找学生信息
 	@Select(" select * from t_student where classID=${id} ")
 	@ResultMap("studentMap")
-	public List<Tstudent> selectByClassID(@Param("id")String classID);
+	public List<Tstudent> selectByClassID(@Param("id")Integer classID);
 }

@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.tpms.po.ClassInfo;
 import com.tpms.po.RightInfo;
 import com.tpms.po.Tclass;
 import com.tpms.po.TmanagementRight;
@@ -36,8 +37,16 @@ public class AdminController {
 	// getUsableClasses.do
 	@RequestMapping("getUsableClasses.do")
 	@ResponseBody
-	public ResponseEntity<List<ClassInfo>>>getUsableClassesDO(){
+	public ResponseEntity<List<ClassInfo>> getUsableClassesDO(){
+		List<Tclass> tclasses = adminService.getClassesByStatus(Tclass.AVAILABLE); // 获取所有可用班级列表
+		List<ClassInfo> classInfos = new ArrayList<>();
 		
+		for (Tclass tclass : tclasses) {
+			int num = adminService.getStudentsByClassID( tclass.getClassID() ).size();
+			classInfos.add(new ClassInfo( tclass.getClassID(), tclass.getClassName(), num ));
+		}
+		
+		return new ResponseEntity<>(classInfos, HttpStatus.OK);
 	}
 	
 	// delMoni.do
@@ -73,7 +82,7 @@ public class AdminController {
 			
 			Tclass tclass = adminService.findClassByID( classID );
 			
-			int num = adminService.getStudentsByClassID(classID).size();
+			int num = adminService.getStudentsByClassID(Integer.parseInt(classID)).size();
 			
 			mana.add(new RightInfo(id,tclass.getClassName(),num,tmanagementRight.getId()));
 		
@@ -85,7 +94,7 @@ public class AdminController {
 			
 			Tclass tclass = adminService.findClassByID(classID);
 			
-			int num = adminService.getStudentsByClassID(classID).size();
+			int num = adminService.getStudentsByClassID(Integer.parseInt(classID)).size();
 			
 			moni.add(new RightInfo( id, tclass.getClassName(), num, tmonitoringRight.getId() ));
 		}
