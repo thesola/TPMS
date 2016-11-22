@@ -85,7 +85,10 @@ public class AdminServiceImpl implements AdminService{
 		Tuser record = new Tuser();
 		record.setIdentity(ID);
 		Tuser tuser = userDAO.selectOne(record); // 找到用户实体
-		
+		if( tuser == null ){ // 未查到用户
+			System.err.println("未查到用户id："+ ID );
+			return "null";
+		}
 		return tuser.getStatus(); // 获取用户状态
 	}
 
@@ -169,8 +172,8 @@ public class AdminServiceImpl implements AdminService{
 	}
 
 	@Override
-	public void removeManagementRight(TmanagementRight mRight) {
-		managementRightDAO.delete(mRight);
+	public void removeManagementRight(Integer mRightID) {
+		managementRightDAO.deleteByPrimaryKey(mRightID);
 	}
 
 	@Override
@@ -186,8 +189,8 @@ public class AdminServiceImpl implements AdminService{
 	}
 
 	@Override
-	public void removeMonitoringRight(TmonitoringRight tRight) {
-		monitoringRightDAO.delete(tRight);
+	public void removeMonitoringRight(Integer tRightID) {
+		monitoringRightDAO.deleteByPrimaryKey(tRightID);
 	}
 
 	@Override
@@ -195,6 +198,16 @@ public class AdminServiceImpl implements AdminService{
 		TmonitoringRight tRight = new TmonitoringRight();
 		tRight.setTeacherID(teacherID);
 		return monitoringRightDAO.select(tRight);
+	}
+
+	@Override
+	public Tclass findClassByID(String id) {
+		Tclass tclass = classDAO.selectByPrimaryKey(Integer.parseInt(id));
+		if( tclass == null ){
+			System.err.println( "class information not founded:classID="+id );
+			return new Tclass();
+		}
+		return tclass;
 	}
 
 	

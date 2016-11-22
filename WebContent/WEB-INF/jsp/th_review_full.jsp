@@ -36,11 +36,11 @@
    <div class="container">
        <!--面包屑  -->
 	   <ul class="sui-breadcrumb" style="margin-left: 9%;"> 
-		  <li><a href="th_index.jsp">查看进度</a></li>
-		  <li><a href="th_detail.jsp">详情</a></li>
+		  <li><a href="th_index.do">查看进度</a></li>
+		  <li><a href="th_detail.do">详情</a></li>
 		  <li class="active">审核</li>
 		</ul>
-		<a href="th_review_half.jsp"><img src="http://oeznmscij.bkt.clouddn.com//full.png"/></a>
+		<a href="th_review_half.do"><img src="http://oeznmscij.bkt.clouddn.com//full.png"/></a>
 		<!-- 文档显示处 -->
 		<div class="show scroll-wrap" >
 		</div>

@@ -77,14 +77,14 @@ font-size: 10px !important;
 	  <div class="sui-row">
 	    <div class="span1">
 	    </div>
-	    <div class="span3">
+	   <div class="span3">
 	         <!-- 左侧导航 -->
 		    <div class="menu">
 			   <ul id="demo-list">
-			    <li><a href="th_creat.jsp">新建实训任务</a></li>
-				<li><a href="th_distribute.jsp">项目分发</a></li>
-				<li class="current"><a href="th_index.jsp">查看进度</a></li>
-			    <li><a href="th_score.jsp">评分</a></li>
+			    <li ><a href="th_creat.do">新建实训任务</a></li>
+				<li><a href="th_distribute.do">项目分发</a></li>
+				<li class="current"><a href="th_index.do">查看进度</a></li>
+			    <li><a href="th_score.do">评分</a></li>
 			   </ul>
 			</div>
 	    </div>
@@ -124,8 +124,8 @@ font-size: 10px !important;
 									  <div style="width: 20%;" class="bar">20%</div>
 								   </div></td>
 						      <td>第一组</td>
-						      <td><a href="th_review_full.jsp" class="sui-btn btn-small btn-primary">审核</a>
-						          <a href="th_detail.jsp" class="sui-btn btn-small btn-primary">查看</a></td>
+						      <td><a href="th_review_full.do" class="sui-btn btn-small btn-primary">审核</a>
+						          <a href="th_detail.do" class="sui-btn btn-small btn-primary">查看</a></td>
 						    </tr>
 						     <tr>
 						      <td><a href="javascript:void(0);" class="sui-btn btn-primary">需求分析进行中</a></td>

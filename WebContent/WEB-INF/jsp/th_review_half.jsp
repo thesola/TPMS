@@ -87,10 +87,10 @@
 	         <!-- 左侧导航 -->
 		    <div class="menu">
 			   <ul id="demo-list">
-			    <li><a href="th_creat.jsp">新建实训任务</a></li>
-				<li><a href="th_distribute.jsp">项目分发</a></li>
-				<li class="current"><a href="th_index.jsp">查看进度</a></li>
-			    <li ><a href="th_score.jsp">评分</a></li>
+			    <li><a href="th_creat.do">新建实训任务</a></li>
+				<li><a href="th_distribute.do">项目分发</a></li>
+				<li class="current"><a href="th_index.do">查看进度</a></li>
+			    <li ><a href="th_score.do">评分</a></li>
 			   </ul>
 			</div>
 	    </div>
@@ -99,11 +99,11 @@
 			<div class="content" style="margin-top:20px;">
 			       <!--面包屑  -->
 				   <ul class="sui-breadcrumb"> 
-					  <li><a href="th_index.jsp">查看进度</a></li>
-					  <li><a href="th_detail.jsp">详情</a></li>
+					  <li><a href="th_index.do">查看进度</a></li>
+					  <li><a href="th_detail.do">详情</a></li>
 					  <li class="active">审核</li>
 					</ul>
-					<a href="th_review_full.jsp"><img src="http://oeznmscij.bkt.clouddn.com//half.png"/></a>
+					<a href="th_review_full.do"><img src="http://oeznmscij.bkt.clouddn.com//half.png"/></a>
 					<!-- 文档显示处 -->
 					<div class="show scroll-wrap" >
 					</div>

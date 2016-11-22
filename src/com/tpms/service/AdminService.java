@@ -37,7 +37,7 @@ public interface AdminService {
 	// 获取教师列表
 	public List<Tteacher> getAllTeachers();
 	
-	// 对教师姓名模糊查询
+	// 对教师姓名/工号模糊查询
 	public List<Tteacher> getTeachersBy(String key);
 	
 	// 获取某一种状态的所有教师信息
@@ -55,7 +55,7 @@ public interface AdminService {
 	// 按班级检索学生列表
 	public  List<Tstudent> getStudentsByClassID(String classID);
 	
-	// 对学生姓名模糊查询
+	// 对学生姓名/学号模糊查询
 	public List<Tstudent> getStudentsBy(String key);
 	
 	// 获取某一种状态的学生列表
@@ -65,7 +65,7 @@ public interface AdminService {
 	public void addManagementRight(TmanagementRight mRight);
 	
 	// 撤销教师管理权限
-	public void removeManagementRight(TmanagementRight mRight);
+	public void removeManagementRight(Integer mRightID);
 	
 	// 查询教师管理权限
 	public List<TmanagementRight> getManagementRights(String teacherID);
@@ -74,9 +74,12 @@ public interface AdminService {
 	public void addMonitoringRight(TmonitoringRight tRight);
 	
 	// 撤销教师听课权限
-	public void removeMonitoringRight(TmonitoringRight tRight);
+	public void removeMonitoringRight(Integer tRightID);
 	
 	// 查询教师听课权限
 	public List<TmonitoringRight> getMonitoringRights(String teacherID);
+	
+	// 根据班级id查找班级信息
+	public Tclass findClassByID( String id );
 	
 }

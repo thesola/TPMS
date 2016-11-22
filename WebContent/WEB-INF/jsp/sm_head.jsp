@@ -26,30 +26,21 @@
    }
   
 </style>
-<!-- <script>
-	$(function(){
-		$(".batch").click(function(){
-			$("#btn_file").click();
-			$("#btn_file").on("change",function(){
-				var objUrl = getObjectURL(this.files[0]);
-				if(objUrl){
-					$(".batch").attr("src",objUrl);
-				}
-			});
-		});
-	});
-	function getObjectURL(file){
-		var url = null;
-		if(window.createObjectURL != undefined){
-			url=window.createObjectURL(file);
-		}else if(window.URL != undefined){
-			url=window.URL.createObjectURL(file);
-		}else if(window.webkitURL != undefined){
-			url=window.webkitURL.createObjectURL(file);
+
+<script>
+	
+	$(function(){ // 登录验证
+		
+		if( "" == '${userInfo}' ){
+			location.href = "login.do";
 		}
-		return url;
-	} -->
+	
+		
+		
+	});
+	
 </script>
+
 </head>
 <body>
    <div class="mycontainer"> 
@@ -58,7 +49,7 @@
 		    <ul class="sui-nav">
 		      <li class="sui-dropdown"><a href="javascript:void(0);" data-toggle="dropdown" class="dropdown-toggle">教师信息<i class="caret"></i></a>
 		        <ul role="menu" class="sui-dropdown-menu">
-		          <li role="presentation"><a role="menuitem" tabindex="-1" href="system_manager.jsp">查看</a></li>
+		          <li role="presentation"><a role="menuitem" tabindex="-1" href="system_manager.do">查看</a></li>
 		          <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="batch"
 		           id="J_addsuppliers"  data-toggle="modal" data-backdrop="static"
 		           data-target="#MyTeacherAdd">添加</a></li>
@@ -70,7 +61,7 @@
 		           id="J_addsuppliers"  data-toggle="modal" data-backdrop="static"
 		           data-target="#MyClassAdd">添加</a></li>
 		          <li role="presentation" class="divider"></li>
-		          <li role="presentation"><a role="menuitem" tabindex="-1" href="sm_classInfo.jsp">软件1431</a></li>
+		          <li role="presentation"><a role="menuitem" tabindex="-1" href="sm_classInfo.do">软件1431</a></li>
 		        </ul>
 		      </li>
 		    </ul>
@@ -82,12 +73,12 @@
 		      <li>
 		          <span class="sui-dropdown" style="margin-top:12px;">
 		             <span class="dropdown-inner">
-			             <a href="#"><img alt="head" src="http://oeznmscij.bkt.clouddn.com//image1475068204818004744.jpg"
+			             <a href="#"><img alt="head" src="${userInfo.head}"
 			              width="22px" height="22px" style="border-radius: 50%;"/></a>
-		                <a role="button" data-toggle="dropdown" href="#" class="dropdown-toggle">name<i class="caret"></i></a>
+		                <a role="button" data-toggle="dropdown" href="#" class="dropdown-toggle">${userInfo.name} <i class="caret"></i></a>
 	                      <ul role="menu" aria-labelledby="drop1" class="sui-dropdown-menu">
-	                      <li role="presentation"><a role="menuitem" tabindex="-1" href="sm_personInfo.jsp">个人中心</a></li>
-	                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">退出</a></li>
+	                      <li role="presentation"><a role="menuitem" tabindex="-1" href="sm_personInfo.do">个人中心</a></li>
+	                        <li role="presentation"><a role="menuitem" tabindex="-1" href="exit.do" >退出</a></li>
 	                      </ul>
 	                 </span>
 	             </span>
@@ -111,11 +102,12 @@
 	              <h4 id="myModalLabel" class="modal-title">添加教师信息</h4>
 	          </div>
 	          <div class="modal-body sui-form form-horizontal" style="overflow-y: auto;">
-	              <form class="sui-form form-horizontal sui-validate">
+	              <form class="sui-form form-horizontal sui-validate" action="addTeacher.do" method="post" >
 			         <div class="control-group">
 					    <label for="num" class="control-label">工号：</label>
 					    <div class="controls">
-					      <input type="text" id="num" placeholder="required" data-rules="required" name="num">
+					      <input type="text" id="num" placeholder="required" data-rules="required|minlength=6|maxlength=16"
+ name="num">
 					    </div>
 					  </div>
 					  <div class="control-group">
@@ -127,14 +119,14 @@
 					  <div class="control-group">
 					    <label for="sex" class="control-label">性别：</label>
 					    <label data-toggle="radio" class="radio-pretty inline checked">
-						    <input type="radio" checked="checked" name="radio1"><span>男</span>
+						    <input type="radio" checked="checked" name="radio1" value="0"><span>男</span>
 						 </label>
 					    <label data-toggle="radio" class="radio-pretty inline">
-						    <input type="radio" name="radio1"><span>女</span>
+						    <input type="radio" name="radio1" value="1"><span>女</span>
 						 </label>
 					  </div>
 					    <div  style="text-align:center">
-					      <input type="submit" id="add" name="add" value="添加" class="sui-btn btn-bordered btn-primary">
+					      <input type="button" id="add" name="add" value="添加" class="sui-btn btn-bordered btn-primary">
 					    </div>
 			     </form>
 	          </div>

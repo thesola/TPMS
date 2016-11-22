@@ -11,9 +11,15 @@
     http://www.springframework.org/schema/mvc
     http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
     
-    
     <!-- 声明使用mvc下的自动注解 -->
-    <mvc:annotation-driven/>
+    <mvc:annotation-driven>
+		<!-- 解决中文乱码问题 -->
+	     <mvc:message-converters register-defaults="true">
+		    <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+				<property name="supportedMediaTypes" value = "text/plain;charset=UTF-8" />
+		    </bean>
+	   </mvc:message-converters>
+    </mvc:annotation-driven>
     
     <!-- 此处声明control类所在的位置 -->
      <context:component-scan base-package="com.tpms.web"/>
@@ -23,7 +29,7 @@
      
      <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
            p:viewClass="org.springframework.web.servlet.view.JstlView"
-		   p:prefix="/"
+		   p:prefix="/WEB-INF/jsp/"
            p:suffix=".jsp"></bean>
 
 </beans>

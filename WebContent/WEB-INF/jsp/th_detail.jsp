@@ -140,10 +140,10 @@ background: #d2d2d2;
 	         <!-- 左侧导航 -->
 		    <div class="menu">
 			   <ul id="demo-list">
-			    <li><a href="th_creat.jsp">新建实训任务</a></li>
-				<li><a href="th_distribute.jsp">项目分发</a></li>
-				<li class="current"><a href="th_index.jsp">查看进度</a></li>
-			    <li><a href="th_score.jsp">评分</a></li>
+			    <li ><a href="th_creat.do">新建实训任务</a></li>
+				<li><a href="th_distribute.do">项目分发</a></li>
+				<li class="current"><a href="th_index.do">查看进度</a></li>
+			    <li><a href="th_score.do">评分</a></li>
 			   </ul>
 			</div>
 	    </div>
@@ -152,7 +152,7 @@ background: #d2d2d2;
 			<div class="content" style="margin-top:20px;">
 			    <!-- 面包屑导航 -->
 			    <ul class="sui-breadcrumb breadcrumb-dark">
-				  <li><a href="th_index.jsp">查看进度</a></li>
+				  <li><a href="th_index.do">查看进度</a></li>
 				  <li class="active">详情</li>
 				</ul>
 				<!-- 详细内容 -->
@@ -195,8 +195,8 @@ background: #d2d2d2;
 								   <div class="txt">
 								       <p>需求分析</p>
 								       <p>2016.10.30</p>
-								       <p style="float:right;margin-right:35px;margin-top:-40px;"><a href="th_review(full).jsp" class="timeline_a">查看</a></p>
-								        <p style="float:right;margin-top:-40px;"><a href="th_review_full.jsp" class="timeline_a">审核</a></p>
+								       <p style="float:right;margin-right:35px;margin-top:-40px;"><a href="#" class="timeline_a">查看</a></p>
+								        <p style="float:right;margin-top:-40px;"><a href="th_review_full.do" class="timeline_a">审核</a></p>
 								    </div>
 								</li>
 								<li class="type3">

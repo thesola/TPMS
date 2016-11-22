@@ -31,6 +31,9 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public Tuser login(String account, String passwd) {
+		if( null == account || null == passwd ){
+			return null;
+		}
 		Tuser tuser = new Tuser();
 		tuser.setIdentity(account);
 		tuser.setPasswd(passwd);

@@ -33,13 +33,13 @@ public class testAdminService {
 		}
 	}
 	
-	@Test
-	public void testRemoveMonitoringRight(){
-		TmonitoringRight tRight = new TmonitoringRight();
-		tRight.setTeacherID("1502753115");
-		tRight.setClassID("2");
-		adminService.removeMonitoringRight(tRight);
-	}
+//	@Test
+//	public void testRemoveMonitoringRight(){
+//		TmonitoringRight tRight = new TmonitoringRight();
+//		tRight.setTeacherID("1502753115");
+//		tRight.setClassID("2");
+//		adminService.removeMonitoringRight("","");
+//	}
 	
 	@Test
 	public void testAddMonitoringRight(){
@@ -57,13 +57,7 @@ public class testAdminService {
 		}
 	}
 	
-	@Test
-	public void testReoveManagementRight(){
-		TmanagementRight mRight = new TmanagementRight();
-		mRight.setTeacherID("1402753115");
-		mRight.setClassID("1");
-		adminService.removeManagementRight(mRight);
-	}
+//	5r
 	
 	@Test
 	public void testAddManagementRight(){
