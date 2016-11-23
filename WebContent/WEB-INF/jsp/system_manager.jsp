@@ -343,18 +343,29 @@
 		    		  	  
 		    			  if( manaSelected ){ // 添加管理权限
 		    				  
-		    				  $.post("addManaRight.do",{'cID':cID,'tID':tID},function(){
+		    				  $.ajax({
+		    					  type:"post",
+		    					  url:"addManaRight.do",
+		    					  data:{'cID':cID,'tID':tID},
+		    					  async:false
 		    				  });
 		    				  
 		    			  }else{ // 添加听课权限
 		    				  
-		    				  $.post("addMoniRight.do",{'cID':cID,'tID':tID},function(){
+		    				  $.ajax({
+		    					  type:"post",
+		    					  url:"addMoniRight.do",
+		    					  data:{'cID':cID,'tID':tID},
+		    					  async:false
 		    				  });
 		    				  
 		    			  }
 		    			  
 		    		  }
 		    	  });
+		    	  
+		    	// 刷新权限面板
+				  refreshRightInfo();
 		    	  
 		         $.alert({
 		          hasfoot: false,
@@ -364,9 +375,6 @@
 		          timeout: 1000
 		        }); 
 		         
-		         // 刷新权限面板
-		         refreshRightInfo();
-
 		      },
 		      hide: function() {
 		        return $supDialog.modal('shadeOut');
