@@ -28,14 +28,36 @@
 </style>
 
 <script>
-	
+
 	$(function(){ // 登录验证
 		
 		if( "" == '${userInfo}' ){
 			location.href = "login.do";
 		}
 	
-		
+		$("#J_addsuppliers_class").click( function(){
+			alert("哈哈哈");
+		} );
+	
+		// 刷新菜单栏上的标签
+		function refreshCTags(){
+			
+			// 删除当前标签
+			$(".cTag").each(function(){
+				$(this).remove();
+			});
+			
+			// 获取新的班级列表
+			$.ajax({
+				type:"get",
+				url:"getClassList.do",
+				async:false,
+				success:function(data){
+					alert(data);
+				}
+			});
+			
+		}
 		
 	});
 	
@@ -51,17 +73,20 @@
 		        <ul role="menu" class="sui-dropdown-menu">
 		          <li role="presentation"><a role="menuitem" tabindex="-1" href="system_manager.do">查看</a></li>
 		          <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="batch"
-		           id="J_addsuppliers"  data-toggle="modal" data-backdrop="static"
+		           id="J_addsuppliers_teacher"  data-toggle="modal" data-backdrop="static"
 		           data-target="#MyTeacherAdd">添加</a></li>
 		        </ul>
 		      </li>
 		      <li class="sui-dropdown"><a href="javascript:void(0);" data-toggle="dropdown" class="dropdown-toggle">班级信息<i class="caret"></i></a>
 		        <ul role="menu" class="sui-dropdown-menu">
 		          <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="batch"
-		           id="J_addsuppliers"  data-toggle="modal" data-backdrop="static"
+		           id="J_addsuppliers_class"  data-toggle="modal" data-backdrop="static"
 		           data-target="#MyClassAdd">添加</a></li>
-		          <li role="presentation" class="divider"></li>
-		          <li role="presentation"><a role="menuitem" tabindex="-1" href="sm_classInfo.do">软件1431</a></li>
+		          <li role="presentation" class="divider" id="divider_before_cTags"></li>
+					
+					
+		          <li role="presentation" class="cTag" ><a role="menuitem" tabindex="-1" href="sm_classInfo.do">软件1431</a></li>
+	
 		        </ul>
 		      </li>
 		    </ul>
@@ -146,11 +171,14 @@
 	              <h4 id="myModalLabel" class="modal-title">添加班级信息</h4>
 	          </div>
 	          <div class="modal-body sui-form form-horizontal" style="overflow-y: auto;">
-	              <form class="sui-form form-horizontal sui-validate">
+	              <form class="sui-form form-horizontal sui-validate" action="addClass.do" >
 			         <div class="sui-dropdown-like">
 					    <input type="text" value="" data-toggle="autocomplete" 
 					    data-lookup="[&quot;软件1431&quot;, &quot;软件1421&quot;,&quot;软件1411&quot;]" 
-					    data-minchars="0" class="input-large"><i class="sui-icon icon-pc-chevron-bottom"></i>
+					    data-minchars="0" class="input-large"
+					    name="cName"
+					    id="cInput">
+					    <i class="sui-icon icon-pc-chevron-bottom"></i>
 					  </div>
 					  <input type="submit" id="add" name="add" value="添加" class="sui-btn btn-bordered btn-primary">
 			     </form>

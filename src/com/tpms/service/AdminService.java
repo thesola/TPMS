@@ -44,7 +44,7 @@ public interface AdminService {
 	public List<Tteacher> getTeachersByStatus(String status);
 	
 	// 获取班级列表
-	public List<Tclass> getAllClasses(String key);
+	public List<Tclass> getAllClasses();
 	
 	// 对班级名称模糊查询
 	public List<Tclass> getClassesBy(String key);

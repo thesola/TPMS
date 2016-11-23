@@ -14,8 +14,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tpms.po.ClassInfo;
 import com.tpms.po.RightInfo;
 import com.tpms.po.Tclass;
@@ -33,6 +31,25 @@ public class AdminController {
 	
 	private final String logoff = "注销";
 	private final String restore = "还原";
+	
+	// getClassList.do
+	@RequestMapping("getClassList.do")
+	@ResponseBody
+	public ResponseEntity<List<Tclass>> getClassListDO(){
+		
+		List<Tclass> tclasses = adminService.getAllClasses();
+
+		return new ResponseEntity<>(tclasses, HttpStatus.OK);
+		
+	}
+	
+	// addClass.do
+	@RequestMapping("addClass.do")
+	@ResponseBody
+	public ResponseEntity<String> addClassDO( String cName ){
+		adminService.insertOneClass(new Tclass( cName ));
+		return new ResponseEntity<>(HttpStatus.OK);
+	}
 	
 	// addMoniRight.do
 	@RequestMapping("addMoniRight.do")

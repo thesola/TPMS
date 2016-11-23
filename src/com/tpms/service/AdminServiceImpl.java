@@ -137,7 +137,7 @@ public class AdminServiceImpl implements AdminService{
 	}
 
 	@Override
-	public List<Tclass> getAllClasses(String key) {
+	public List<Tclass> getAllClasses() {
 		return classDAO.selectAll();
 	}
 
